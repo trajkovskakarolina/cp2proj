@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Winner</title>
+    <link rel="stylesheet" type="text/css" href="css1.css">
+	<script src="js/FileSaver.js"></script>
+	<script type="text/javascript">
+		function enterTime(){
+			var timee = document.getElementById("inVal");
+			timee.innerHTML = localStorage.getItem('time');
+			localStorage.removeItem('time');
+		}
+
+		function saveDynamicDataToFile() {
+
+            var userName = document.getElementById("inKey").value;
+            var userTime = document.getElementById("inVal").value;
+			            
+            var blob = new Blob([userName, userTime], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "topPlayers.txt");
+        }
+    	
+    </script>
+</head>
+<body class="welcome">
+	<h1>Congrats, you won!</h1>
+	
+    <fieldset>
+    	<legend>Enter our top player list</legend>
+    	<input type="text" id="inKey" placeholder="Name...">
+    	<input type="text" id="inVal">
+    	<button onclick="saveDynamicDataToFile()">Enter</button> 	
+    </fieldset>
+    <script type="text/javascript">
+    	enterTime();
+    	//var key = document.getElementById("inKey").innerHTML;
+    	//var value = document.getElementById("inVal").innerHTML;
+        //localStorage.setItem(key, value);
+
+
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timer try</title>
+</head>
+<body>
+   <p id="timerr">0</p>
+
+   <script type="text/javascript">
+   	var text = document.getElementById("timerr");
+   	var cnt = 0;
+
+   	function convertSeconds(s) {
+      var min = Math.floor(s / 60);
+      var sec = s % 60;
+      return min + ':' + sec;
+    }
+
+   	var funk = setInterval(function(){
+   		cnt++;
+   		text.innerHTML = "Interval " + convertSeconds(cnt);
+   		console.log("Interval" + cnt);
+
+   	}, 1000);
+
+   </script>
+
+</body>
+</html>

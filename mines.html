@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<title>Mines</title>
+<head>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=7CogZHJLQR3UfSGxDqYeB39b0G0bjWbjs0AchFFm2Y9HTAWKpdqPY3X2jhct_MvP9oNLQSFiXD4Bi72t8ZEEn5pE8eF2FmgadOXJB4gsA0g" charset="UTF-8"></script><script src="game.js"></script>
+<script>
+function newGame() {
+	minefield = new Minefield(10, 10, 10);
+	print();
+}
+
+function check() {
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	alert(minefield.symbol(x, y));
+}
+
+function hit() {
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	minefield.unveil(x, y);
+	print();
+}
+
+function print() {
+	var remaining = minefield.veiled + minefield.explosions - 10;
+	document.getElementById("output").innerHTML =
+		minefield.toString() + "\n" + remaining + "/" + minefield.explosions;
+}
+</script>
+</head>
+<body>
+<pre id="output"></pre>
+<p>
+	<input type="number" id="x" value = "0" min="0" max="9">
+	<input type="number" id="y" value = "0" min="0" max="9">
+	<input type="button" value="Check" onclick="check()">
+	<input type="button" value="Hit" onclick="hit()">
+	<input type="button" value="New" onclick="newGame()">
+</p>
+<script>
+	newGame();
+</script>
+</body>
+</html>

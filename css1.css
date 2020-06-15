@@ -1,0 +1,492 @@
+* {
+	box-sizing: border-box;
+	font-family: Trebuchet MS;
+}
+
+body.welcome {									/*special css code for welcome page*/
+	background-image: url("bg3.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% auto;
+}
+
+h1.welcome {
+	font-size: 50px;
+	color: #43A282;
+	position: absolute;
+	top: 10%;
+	left: 25%;
+}
+
+nav.welcome {
+	position: absolute;
+	top: 30%;
+	left: 12%;
+	text-align: justify;
+	font-size: 25px;
+}
+
+img.welcome {
+	border-radius: 15px;
+	border: 6px solid #F2A245;
+	padding: 15px;
+	background-color: white;
+}
+
+body {												/*general body css code for all other pages*/
+	background-image: url("b2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% auto;
+}
+hr { 											/*decoration for horizontal line in header*/
+	margin-top: 8%;
+	border: 1px solid #43A282;
+	margin-left: 7%;
+	width: 45%;
+}
+
+#headerImg {
+	position: absolute;
+	left: 7%;
+	top: 5%;
+	width: 40%;
+}
+
+.clock {
+	position: absolute;
+	top: 0;
+	right: 3%;
+}
+
+.corona {
+	position: absolute;
+	right: 7%;
+	top: 13%;
+}
+
+a.corona:link, a.corona:visited {       /*end of header, same for all subpages*/
+	color: red;
+}
+
+section {
+	width: 100%;
+}
+
+nav {
+	width: 40%;
+	height: 50%;
+	position: absolute;
+	top: 25%;
+	left: 7%;
+}
+
+.menu {                              /*all menu items are in class menu*/
+	font-size: 25px;
+	border: 4px solid #43A282;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+	padding: 5px;
+	background-color: #F5FFFA;
+}
+
+.menu:hover {
+  	background-color: #43A282;
+  	border: 6px solid #F2A245;           
+}
+.active {
+  	background-color: #43A282;   
+  	font-size: 25px;
+	border: 4px solid #43A282; 
+	text-align: right;
+}
+
+#home {
+	width: 80%;
+}
+#help {
+	width: 70%;
+}
+#tut {
+	width: 60%;
+}
+#top {
+	width: 50%;
+}
+#meme {
+	width: 40%;
+}
+#us {
+	width: 30%;
+}
+#contact {
+	width: 20%;
+}
+
+
+article {
+	width: 30%;
+	position: absolute;
+	top: 20%;
+	right: 7%;  
+	text-align: center;   
+}
+
+.set {                       /*heading of most of the subpages, like "Set up you game"*/
+	font-size: 40px;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 5px;	
+}
+
+.rules {					/*paragraph in page help*/
+	font-size: 20px;
+	text-align: center;
+	border: 4px solid #F2A245;
+	padding: 15px;
+	border-radius: 10px;
+}
+                              /*in subpage home*/
+fieldset {
+	text-align: right;
+	font-size: 25px;
+}
+
+legend {
+	text-align: center;
+	font-size: 30px;
+}
+
+.art {                     /*subpage home, first two parst in article*/
+	font-size: 30px;
+	text-align: right;
+	padding: 5px;
+}
+
+#art3 {						/*subpage home, third part in article with play button*/
+	margin-top: 5%;
+	font-size: 30px;
+	text-align: center;
+}
+
+.art span {
+	font-size: 18px;
+}
+
+button {					
+	font-size: 25px;
+	margin-top: 2%;
+	background-color: #F5FFFA;
+	border: 2px solid #43A282;
+	border-radius: 10px;
+	width: 70px;
+	padding: 3px;
+}
+
+button:hover, input.menu2:hover {
+	background-color: #43A282;
+	color: white;
+}
+
+button.welcome {          /*button in welcome page with special size*/
+	width: 100px;
+}
+
+button.menu2 {          /*buttons in play.html that is supposed to be second menu after we make the game*/
+	width: 150px;
+}
+
+input.menu2 {
+	font-size: 20px;
+	margin-top: 2%;
+	background-color: #F5FFFA;
+	border: 2px solid #43A282;
+	border-radius: 10px;
+	width: 70px;
+	padding: 3px;
+}
+
+
+.bio {                        /*subpage about us*/
+	display: inline-block;
+}
+.bioH {
+	font-size: 23px;
+}
+
+.bioImg {
+	width: 20%;
+	border-radius: 15px;
+	border: 6px solid #F2A245;
+	float: left;
+	margin-top: 5%;
+}
+.bioTxt {
+	width: 75%;
+	float: right;
+	font-size: 15px;
+	text-align: left;
+}
+.contact {                   /*subpage contact*/
+	text-align: center;
+	font-size: 15px;
+	border: 4px solid #F2A245;
+	padding: 10px;
+	padding-top: 0;
+	border-radius: 10px;
+}
+
+.icons {                     /*images as icons in subpage contact*/
+     width: 50%;
+     margin-left: 25%;	
+}
+
+article.meme {				/*special code for article in subpage gallery*/
+	width: 30%;
+	position: absolute;
+	top: 25%;
+	right: 7%;  
+	text-align: center;   
+
+}
+.meme img {					
+	width: 30%;
+	transition: transform 0.5s;      
+	border: 2px solid red;
+	margin-right: 2%;
+	margin-bottom: 2%;
+}
+
+.meme img:hover {									/*zooming in the pictures in gallery*/
+    -ms-transform: scale(2); /* IE 9 */
+	-webkit-transform: scale(2); /* Safari 3-8 */
+	transform: scale(2);    
+}
+
+footer {
+	position: absolute;                 /*sitemap in footer same for all subpages*/
+	top: 85%;
+	width: 86%;
+	height: 15%;
+	left: 7%;
+	border: 1px solid black;
+}
+
+.sitemap {								/*three columns of items in site map*/ 
+	width: 33%;
+	display: inline-block;
+	color: black;
+}
+
+.sitemap a:link, .sitemap a:visited{
+	color: red;
+}
+
+.dropdown:hover .add {			/*dropdown item*/
+	display: block;
+	visibility: visible;
+}
+
+.add{
+	visibility: hidden;
+}
+
+.noDot {         				/*hidden parts of the list in order to keep the balance because of the dropdown*/
+	list-style-type: none;
+	visibility: hidden;
+}
+
+.sl1 {                       /*picture in footer that is only for minimized screen*/
+	display: none;	
+}
+
+.copyright { 					/*positioning the copyright part in the footer*/ 
+	position: absolute;
+	bottom: 0;
+	right: 0%;
+	text-decoration: underline; 
+	border: 1px solid black;	
+}
+
+div.menu a {
+	display: block;                /*link is on whole div*/
+}
+
+a:link {                                /*links of the menu in nav*/
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: underline;
+    color: black;
+}
+a:hover, a:active {
+    text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+	    h1.welcome {         /*again special code for welcome page*/
+			font-size: 30px;
+			left: 37%;
+			top: 5%;
+		}
+		p.welcome {
+			font-size: 15px;
+			width: 100%;
+		}
+		nav.welcome {
+			width: 90%;
+			left: 5%;
+			top: 13%;
+		}
+		article.welcome {
+			width: 90%;
+			left: 5%;
+			top: 50%;
+			bottom: 0;
+		}
+		img.welcome {
+			width: 50%;
+		}
+
+	    #headerImg {          /*header after 800px*/
+        	width: 80%;
+        }
+
+        .clock, .corona{
+        	display: none;
+        }
+
+        hr {
+        	margin-top: 20%;
+        	width: 80%;
+        }
+
+        nav, article {
+          width: 40%; 
+          height: auto;
+          position: absolute;
+          top: 20%;
+        }
+
+        nav {
+          left: 5%;
+        }
+
+         #home, #help, #tut, #top, #us, #contact, #meme {   /*special size of menu items when minimized*/  
+        	margin: auto;
+        	margin-bottom: 10px;
+        	width: 50%;
+        	text-align: center;
+        	font-size: 20px;
+        }
+
+        article {
+          right: 5%; 
+          height: 60%;
+          font-size: 15px;
+        }
+        
+        .set, fieldset, legend, #art3 {
+        	font-size: 15px;
+        }	
+
+        .art span { font-size: 10px; }
+
+        .set {
+        	margin-top: 20%;       
+        }
+
+        #art3 {
+        	margin-bottom: 0;
+        	margin-left: 10%;
+        	width: 80%;
+        }
+        .active {
+        	font-size: 20px;
+        	text-align: center;
+        }
+
+        .rules {
+        	font-size: 13px;
+        }
+
+        .bioImg {
+        	display: none;        /*some items that didn't fit the minimized screen properly are disabled*/
+        }
+        .bioTxt, .bioP {
+        	width: 100%;
+        	font-size: 12px;
+        }
+
+        .contact {
+        	font-size: 10px;
+        }
+
+       .iconImg {
+       	    width: 15%;
+        }
+
+        .meme img {
+        	width: 30%;
+        	margin-top: 70%;
+        }
+
+        footer {
+        	position: absolute;
+        	bottom: 0;
+        	left: 0;
+        	width: 100%;
+        	height: auto;
+        	border-style: none;
+        }
+        .sl1 {                            /*displaying picture that is not visible in full screen*/
+            display: block;                                 
+			height: 100%;
+			width: 100%;
+			border-radius: 15px;
+		}
+        .sitemap {
+        	display: none;
+        }
+
+        .copyright {
+        	background-color: white;
+        }
+       
+		
+}
+
+
+@media (max-width: 1200px) {
+	body, body.welcome {                       /*replacing the background picture*/
+	      background-image: url("bg.jpg");
+	      background-repeat: no-repeat;
+	      background-attachment: fixed;
+	      background-size:  100% 100%;
+        }
+
+
+
+}
+
+#output1 {
+	width: 108px;
+	margin-left: 180px;
+
+}
+
+#output2 {
+	width: 148px;
+	margin-left: 160px;
+
+}
+
+#output3 {
+	width: 208px;
+	margin-left: 140px;
+
+}
+
